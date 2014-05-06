@@ -15,3 +15,6 @@ RUN su - root -c "apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7
 
 # Prepare Supervisor Daemon
 ADD supervisor/database.conf /etc/supervisor/conf.d/
+
+# Bootstrap
+CMD ["/usr/bin/supervisord"]
